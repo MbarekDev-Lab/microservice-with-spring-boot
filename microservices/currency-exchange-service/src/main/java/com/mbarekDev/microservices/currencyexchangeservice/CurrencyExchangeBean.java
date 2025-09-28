@@ -7,7 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class CurrencyExchange {
+public class CurrencyExchangeBean {
 	@Id
 	private Long id;
 	
@@ -20,11 +20,11 @@ public class CurrencyExchange {
 	private BigDecimal conversionMultiple;
 	private String environment;
 
-	public CurrencyExchange() {
+	public CurrencyExchangeBean() {
 		
 	}
 	
-	public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
+	public CurrencyExchangeBean(Long id, String from, String to, BigDecimal conversionMultiple) {
 		super();
 		this.id = id;
 		this.from = from;
@@ -64,7 +64,6 @@ public class CurrencyExchange {
 		this.conversionMultiple = conversionMultiple;
 	}
 
-	
 	public String getEnvironment() {
 		return environment;
 	}
