@@ -15,7 +15,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>24</java.version>
+		<java.version>21</java.version>
 		<spring-cloud.version>2023.0.1</spring-cloud.version>
 	</properties>
 
@@ -42,8 +42,12 @@
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
 		<!-- Spring Boot 2 Tracing -->
-		
 		<!-- Sleuth (Tracing Configuration) > Brave (Tracer library) > Zipkin -->
 		
 		<!-- 
@@ -140,8 +144,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<release>24</release>
-					<compilerArgs>--enable-preview</compilerArgs>
+					<release>21</release>
+					
 				</configuration>
 			</plugin>
 		</plugins>

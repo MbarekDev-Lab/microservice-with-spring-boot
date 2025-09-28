@@ -8,6 +8,7 @@
 		<version>3.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.mbarekDev.microservices</groupId>
 	<artifactId>api-gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -24,26 +25,31 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-		<!-- spring-cloud-starter-gateway is deprecated. It will be removed in the next major release.
-		     Please use spring-cloud-starter-gateway-server-webflux instead.
-		-->
+		<!-- spring-cloud-starter-gateway is deprecated.
+		     It will be removed in the next major release.
+		     Please use spring-cloud-starter-gateway-server-webflux instead.-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+
 		<!-- Spring Boot 2 Tracing -->
-		
 		<!-- Sleuth (Tracing Configuration) > Brave (Tracer library) > Zipkin -->
-		
 		<!-- 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -56,9 +62,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
-		</dependency>
-		
-		-->
+		</dependency>-->
 		
 		<!-- Spring Boot 3+ Tracing -->
 		
@@ -97,7 +101,6 @@
 		    <groupId>io.opentelemetry</groupId>
 		    <artifactId>opentelemetry-exporter-zipkin</artifactId>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
